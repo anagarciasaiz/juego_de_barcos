@@ -3,14 +3,11 @@ import sys
 from clases import Barco
 from clases import Case
 from clases import Tablero
+from clases.Tablero import *
 
 
-
-
-from introducir import (
-    solicitar_introducir_si_o_no,
-    solicitar_introducir_casilla,
-)
+from introducir.buleano  import (solicitar_introducir_si_o_no)
+from introducir.cadena import  (solicitar_introducir_casilla)
 
 
 LONGITUDES_BARCOS = [2, 3, 3, 4, 4, 5]
@@ -33,7 +30,7 @@ def probar_fin_juego(self):
     else:
         return False
     
-def jugar_tirada(self):
+def jugar_tirada():
         """Permite gestionar el dato introducido de una tirada"""
         while True:
             nombre_casilla = solicitar_introducir_casilla(
@@ -51,8 +48,7 @@ def jugar_tirada(self):
 def jugar_una_partida():
     """Algoritmo de una partida"""
     # Creamos un tablero de juego vacío
-
-    tablero = Tablero()
+    tablero = [['[]' for j in range(num_columnas)] for i in range(num_lineas)]
 
 
     while True:
