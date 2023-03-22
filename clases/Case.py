@@ -1,5 +1,4 @@
 from numpy import product
-from clases import Barco
 #from clases import Tablero
 from clases import Case
 from juego import CASO_AGUA, CASO_NO_JUGADO, CASO_TOCADO
@@ -39,7 +38,7 @@ def _generar_nombre(self):
   """Este método puede ser sobrecargado fácilmente"""
   self.nombre = generar_nombre_casilla(self.x, self.y)
 
-def jugar(self):
+def jugar_casilla(self):
   """Describe qué pasa cuando jugamos una casilla"""
   self.jugada = True
   self.jugadas.add(self)
@@ -53,10 +52,10 @@ def jugar(self):
       print("Agua !")
 
 @classmethod
-def generar_casillas():
+def generar_casillas(self):
   for x, y in product(range(tablero_num_lineas),
                       range(tablero_num_columnas)):
-      Case(x, y)
+      self.x, self.y = x, y
 
 
 def __str__(self):
