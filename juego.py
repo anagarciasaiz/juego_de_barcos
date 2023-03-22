@@ -24,7 +24,7 @@ ORIENTACIONES = (VERTICAL, HORIZONTAL)
 
 def probar_fin_juego(self):
     """Permite probar si el juego ha terminado o no"""
-    if len(Barco.casillas_ocupadas - self.casillas_jugadas) == 0:
+    if len(self.casillas_ocupadas - self.casillas_jugadas) == 0:
         print("Bravo. El juego ha terminado !")
         return True
     else:
@@ -42,7 +42,7 @@ def jugar_tirada():
                 print("Esta casilla ya ha sido jugada, elija otra",
                     file=sys.stderr)
             else:
-                casilla.jugar()
+                casilla.jugar_casilla()
                 break
 
 def jugar_una_partida():
