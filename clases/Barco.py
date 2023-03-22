@@ -43,13 +43,13 @@ def horizontal(self):
 
 
 def instanciar(self):
-    for existente in instances:
+    for existente in self.instances:
         if self.casillas.intersection(existente.casillas):
             # break relativo al "for existente in barcos:"
             break
         else:
             # Agregar el barco en el contenedor de barcos
-            instances.append(self)
+            self.instances.append(self)
             # Informar la casilla que contiene un barco.
             for casilla in self.casillas:
                 casilla.contiene_barco = True
