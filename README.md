@@ -1,6 +1,4 @@
-# juego_de_barcos
-Arreglar el código de este ejemplo
+link del repositorio: https://github.com/anagarciasaiz/juego_de_barcos
 
-leer por favor
-https://boscacci.medium.com/why-and-how-to-make-a-requirements-txt-f329c685181e
-
+# Entrega juego barcos
+haz que funcione el siguiente código
